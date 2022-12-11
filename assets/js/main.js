@@ -261,3 +261,22 @@
   new PureCounter();
 
 })()
+document.getElementById('post-btn').addEventListener('click',(e)=>{
+  e.preventDefault();
+  document.getElementById("name").value='';
+  document.getElementById("email").value='';
+  document.getElementById("subject").value='';
+  document.getElementById("message").value='';
+//   Email.send({
+//     Host : "smtp.elasticemail.com",
+//     Username : "amanatmahmud@gmail.com",
+//     Password : "nhtj lrvy goqrxifi",
+//     To : 'amanatmahmud@gmail.com',
+//     From : email,
+//     Subject : subject,
+//     Body : `Hi I am ${name}<br> ${message}`
+// }).then(
+//   message => alert(message)
+// )
+
+})
