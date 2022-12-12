@@ -12,7 +12,9 @@
       return document.querySelector(el)
     }
   }
-
+//   (function() {
+//     emailjs.init('_nD3V4xVG2duFYkkL');
+// })();
   /**
    * Easy event listener function
    */
@@ -267,16 +269,11 @@ document.getElementById('post-btn').addEventListener('click',(e)=>{
   document.getElementById("email").value='';
   document.getElementById("subject").value='';
   document.getElementById("message").value='';
-//   Email.send({
-//     Host : "smtp.elasticemail.com",
-//     Username : "amanatmahmud@gmail.com",
-//     Password : "nhtj lrvy goqrxifi",
-//     To : 'amanatmahmud@gmail.com',
-//     From : email,
-//     Subject : subject,
-//     Body : `Hi I am ${name}<br> ${message}`
-// }).then(
-//   message => alert(message)
-// )
+    emailjs.sendForm('contact_service', 'php-email-form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
 
 })
